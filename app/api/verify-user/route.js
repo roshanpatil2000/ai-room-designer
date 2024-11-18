@@ -10,7 +10,7 @@ export async function POST(req) {
     try {
         const userInfo = await db.select().from(Users)
             .where(eq(Users.email, user?.primaryEmailAddress?.emailAddress))
-        console.log("userInfo: ", userInfo);
+        // console.log("userInfo: ", userInfo);
 
         if (userInfo.length == 0) {
             const SaveResult = await db.insert(Users)

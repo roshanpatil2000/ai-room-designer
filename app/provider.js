@@ -16,11 +16,10 @@ function Provider({ children }) {
       user: user
     })
     setUserDetail(dataResult.data.result)
-    console.log(dataResult.data.result );
+    // console.log(dataResult.data.result );
   }
   return (
     <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
-
       <div>
         {children}
       </div>
